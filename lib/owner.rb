@@ -28,7 +28,9 @@ class Owner
   end
   
   def feed_cats
-    Cat.all
+    Cat.all.select do |cat|
+      cat.owner = self
+    end
     @cats.each do |cat|
       cat.mood = "happy"
     end
