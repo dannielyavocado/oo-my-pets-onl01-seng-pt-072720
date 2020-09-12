@@ -38,10 +38,7 @@ class Owner
   end
   
   def cats
-    Cat.all.select { |cat| cat.owner =}
-      if cat.owner == self
-      end
-    end
+    Cat.all.select { |cat| cat.owner == self }
   end
   
   def say_species
