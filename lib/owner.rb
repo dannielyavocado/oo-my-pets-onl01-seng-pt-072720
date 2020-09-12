@@ -30,7 +30,7 @@ class Owner
   end
   
   def feed_cats
-    Cat.all.select do |cat|
+    cats do |cat|
       if cat.owner == self
         cat.mood = "happy"
       end
