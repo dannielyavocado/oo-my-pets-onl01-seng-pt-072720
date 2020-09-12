@@ -45,6 +45,10 @@ class Owner
     Dog.all.select { |dog| dog.owner == self }
   end
   
+  def list_pets
+    "I have #{@owner.dogs.count} dog(s), and #{@owner.cats.count} cat(s)."
+  end
+  
   def say_species
     "I am a #{species}."
   end
