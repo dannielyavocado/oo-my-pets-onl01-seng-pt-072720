@@ -28,6 +28,7 @@ class Owner
   end
   
   def feed_cats
+    Cat.all
     @cats.each do |cat|
       cat.mood = "happy"
     end
