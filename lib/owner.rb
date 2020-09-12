@@ -22,7 +22,7 @@ class Owner
   end
   
   def walk_dogs
-    dogs do |dog|
+    dogs.each do |dog|
       if dog.owner == self
         dog.mood = "happy"
       end
@@ -30,7 +30,7 @@ class Owner
   end
   
   def feed_cats
-    cats do |cat|
+    cats.each do |cat|
       if cat.owner == self
         cat.mood = "happy"
       end
