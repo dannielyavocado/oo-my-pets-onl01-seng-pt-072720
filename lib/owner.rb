@@ -22,8 +22,10 @@ class Owner
   end
   
   def walk_dogs
-    @dogs.each do |dog|
-      dog.mood = "happy"
+    Cat.all.select do |cat|
+      if cat.owner == self
+        cat.mood = "happy"
+      end
     end
   end
   
