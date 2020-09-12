@@ -22,9 +22,9 @@ class Owner
   end
   
   def walk_dogs
-    Cat.all.select do |cat|
-      if cat.owner == self
-        cat.mood = "happy"
+    dogs do |dog|
+      if dog.owner == self
+        dog.mood = "happy"
       end
     end
   end
@@ -39,6 +39,10 @@ class Owner
   
   def cats
     Cat.all.select { |cat| cat.owner == self }
+  end
+  
+  def dogs
+    Dog.all.select { |dog| dog.owner == self }
   end
   
   def say_species
