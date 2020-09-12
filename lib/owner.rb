@@ -18,7 +18,7 @@ class Owner
   end
     
   def buy_dog(dog)
-    Dog.new(dog, self)
+    @dogs << Dog.new(dog, self)
   end
   
   def walk_dogs
@@ -33,6 +33,13 @@ class Owner
     Cat.all.select do |cat|
       if cat.owner == self
         cat.mood = "happy"
+      end
+    end
+  end
+  
+  def cats
+    Cat.all.select do |cat|
+      if cat.owner == self
       end
     end
   end
